@@ -1,5 +1,3 @@
-//creating functionality for the address book
-
 const storage = window.localStorage
 
 const renderContacts = () => {
@@ -10,23 +8,20 @@ const renderContacts = () => {
         div.innerHTML = ''
         const ul = document.createElement('ul')
 
-        contacts.forEach(contact => {
+        contacts.foreach(contact => {
             let li = document.createElement('li')
 
-            li.innerHTML =
-                <span>${contact.name}</span> |
+            li.innerHTML = `
+                <span>${contact.name}</span> | 
                 <span>${contact.email}</span> |
-                <span>${contact.phone}</span> |
-                <span>${contact.company}</span> |
-                <span>${contact.notes}</span> |
-                <span>${contact.twitter}</span> 
-            
-            ul.appendChild(li)
+                <span>${contact.phone}</span
+          `
+          ul.appendChild(li)
         })
 
         div.appendChild(ul)
     } else {
-        div.innerHTML = '<p>You have no contacts in your address book </p>'
+        div.innerHTML = '<p>You have no contacts in your address book</p>'
     }
 }
 
@@ -37,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault()
 
         //1. Read all the input fields and get their values
-        const { name, email, phone, company, notes, twitter } = contactForm.elements
+        const { name, email, phone, company, notes, twitter } = contactForm.elements 
 
         const contact = {
             name: name.value,
@@ -45,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             phone: phone.value,
             company: company.value,
             notes: notes.value,
-            twitter: twitter.value,
+            twitter: twitter, value,
         }
 
         console.log(contact)
@@ -59,4 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         renderContacts()
         contactForm.reset()
     })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderContacts()
+    const contactForm = document.getElementById('new-contact-form')
 })
