@@ -1,0 +1,26 @@
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 31px;
+    letter-spacing: 4.4px;
+    word-spacing: 3.8px;
+    color: #8e0664;
+    font-weight: 700;
+    font-variant: small-caps;
+    background-color: #C5FFE7;
+    margin: auto;
+    margin-top: 25px;
+    width: 25%;
+    border: 10 px dotted black;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 1px;
+    margin: 10px 0;
+    display: inline-flex;
+    border: 5px solid #8e0664;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
